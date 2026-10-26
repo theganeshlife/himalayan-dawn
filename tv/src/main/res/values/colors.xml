@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="night">#1B1F3B</color>
+    <color name="night_deep">#14162B</color>
+    <color name="snow">#F6F1EA</color>
+    <color name="blush">#FBE3D6</color>
+    <color name="saffron">#F2B66D</color>
+    <color name="rose">#E39B8B</color>
+    <color name="wood">#C7955E</color>
+    <color name="glass">#941B1F3B</color>
+    <color name="glass_line">#29F6F1EA</color>
+    <color name="snow_dim">#BFF6F1EA</color>
+</resources>

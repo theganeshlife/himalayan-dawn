@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Darkens the top and bottom of the photo so the clock, calendar and tiles stay readable. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient android:angle="270" android:startColor="#A614162B" android:centerColor="#0014162B" android:endColor="#0014162B" android:centerY="0.32" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:angle="90" android:startColor="#E614162B" android:centerColor="#5914162B" android:endColor="#0014162B" android:centerY="0.3" />
+        </shape>
+    </item>
+    <item android:gravity="end">
+        <shape>
+            <gradient android:angle="180" android:startColor="#7314162B" android:endColor="#0014162B" />
+        </shape>
+    </item>
+</layer-list>

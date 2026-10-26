@@ -1,0 +1,79 @@
+[
+    {
+        "id":  "phewa",
+        "title":  "Phewa Tal, Pokhara",
+        "author":  "Vyacheslav Argenberg",
+        "license":  "CC BY 4.0",
+        "source":  "https://commons.wikimedia.org/wiki/File:Phewa_Lake,_Pokhara,_Nepal.jpg"
+    },
+    {
+        "id":  "annapurna",
+        "title":  "Annapurna range from Pokhara",
+        "author":  "Jmhullot",
+        "license":  "CC BY 3.0",
+        "source":  "https://commons.wikimedia.org/wiki/File:The_Annapurna_range_from_Pokhara.jpg"
+    },
+    {
+        "id":  "boats",
+        "title":  "Boats on Phewa Tal",
+        "author":  "Bishwas12",
+        "license":  "CC BY-SA 4.0",
+        "source":  "https://commons.wikimedia.org/wiki/File:Boats_in_Fewa_Lake_Pokhara.jpg"
+    },
+    {
+        "id":  "bhaktapur",
+        "title":  "Bhaktapur Durbar Square",
+        "author":  "Janak Bhatta",
+        "license":  "CC BY-SA 4.0",
+        "source":  "https://commons.wikimedia.org/wiki/File:Bhaktapur_Durbar_Square_4.jpg"
+    },
+    {
+        "id":  "nyatapola",
+        "title":  "Nyatapola, Bhaktapur",
+        "author":  "Göran Höglund (Kartläsarn)",
+        "license":  "CC BY 2.0",
+        "source":  "https://commons.wikimedia.org/wiki/File:Nepal_-_Bhaktapur_Nyatapola_temple.jpg"
+    },
+    {
+        "id":  "abc",
+        "title":  "Dawn at Annapurna Base Camp",
+        "author":  "Gaurav Bhandari",
+        "license":  "CC BY-SA 4.0",
+        "source":  "https://commons.wikimedia.org/wiki/File:Dawn%27s_Embrace_at_Annapurna_Base_Camp.jpg"
+    },
+    {
+        "id":  "machhapuchhre",
+        "title":  "Machhapuchhre",
+        "author":  "Bijay Chaurasia",
+        "license":  "CC BY-SA 4.0",
+        "source":  "https://commons.wikimedia.org/wiki/File:Machapuchare_Himal-3797.jpg"
+    },
+    {
+        "id":  "swayambhu",
+        "title":  "Swayambhunath, Kathmandu",
+        "author":  "Nirmal Dulal",
+        "license":  "CC BY-SA 4.0",
+        "source":  "https://commons.wikimedia.org/wiki/File:Swayambhunath_temple_-_an_ancient_religious_architecture_of_Nepal.jpg"
+    },
+    {
+        "id":  "rara",
+        "title":  "Rara Tal, Mugu",
+        "author":  "Chandra Chakradhar",
+        "license":  "CC BY-SA 4.0",
+        "source":  "https://commons.wikimedia.org/wiki/File:Rara_Lake,_Mugu,_Nepal.jpg"
+    },
+    {
+        "id":  "everest",
+        "title":  "Sagarmatha (Everest)",
+        "author":  "Vyacheslav Argenberg",
+        "license":  "CC BY 4.0",
+        "source":  "https://commons.wikimedia.org/wiki/File:Everest,_Himalayas.jpg"
+    },
+    {
+        "id":  "patan",
+        "title":  "Patan Durbar Square",
+        "author":  "Alexander Shafir",
+        "license":  "CC BY-SA 4.0",
+        "source":  "https://commons.wikimedia.org/wiki/File:Nepal_Patan_Durbar_Square_10_(full_res).jpg"
+    }
+]

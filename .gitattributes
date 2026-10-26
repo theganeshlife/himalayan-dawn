@@ -1,0 +1,11 @@
+* text=auto
+
+# Shell scripts must keep Unix line endings to run on macOS/Linux.
+*.sh    text eol=lf
+gradlew text eol=lf
+*.bat   text eol=crlf
+
+*.jpg  binary
+*.png  binary
+*.ttf  binary
+*.jar  binary

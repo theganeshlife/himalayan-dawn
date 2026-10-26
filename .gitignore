@@ -1,0 +1,19 @@
+# Build output
+build/
+.gradle/
+.kotlin/
+*.apk
+*.aab
+captures/
+
+# Local machine settings
+local.properties
+.idea/
+*.iml
+.DS_Store
+
+# Signing keys and passwords: never commit these
+signing/
+*.jks
+*.keystore
+keystore.properties
