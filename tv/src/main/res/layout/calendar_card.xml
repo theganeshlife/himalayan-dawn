@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="270dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_bg"
+    android:clipToOutline="true"
+    android:orientation="vertical">
+
+    <app.himalayandawn.tv.LatticeView
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="14dp">
+
+        <TextView
+            android:id="@+id/bsDate"
+            style="@style/Dawn.Text.Devanagari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontVariationSettings="'wght' 600"
+            android:includeFontPadding="true"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/bsYearDay"
+            style="@style/Dawn.Text.Devanagari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontVariationSettings="'wght' 500"
+            android:textColor="@color/snow"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/glass_line" />
+
+        <TextView
+            android:id="@+id/tithiLine"
+            style="@style/Dawn.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mukta_medium"
+            android:textColor="@color/saffron"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/todayFestival"
+            style="@style/Dawn.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/mukta_light"
+            android:textColor="@color/blush"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:baselineAligned="true"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Dawn.Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nepal_time"
+                android:textColor="@color/snow_dim"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/nepalTime"
+                style="@style/Dawn.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mukta_light"
+                android:textColor="@color/blush"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/nepalAmPm"
+                style="@style/Dawn.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/mukta_light"
+                android:textColor="@color/blush"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
