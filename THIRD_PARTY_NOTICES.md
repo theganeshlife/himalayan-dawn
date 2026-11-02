@@ -1,6 +1,6 @@
 # Third-party notices
 
-Himalayan Dawn's own source code is MIT-licensed (see `LICENSE`). It bundles or uses the following, each under its own licence.
+Lakuri Android TV's own source code is MIT-licensed (see `LICENSE`). It bundles or uses the following, each under its own licence.
 
 ## Photos: `tv/src/main/assets/scenes/`
 

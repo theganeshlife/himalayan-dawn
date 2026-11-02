@@ -1,4 +1,4 @@
-# Himalayan Dawn: notes for Claude
+# Lakuri Android TV: notes for Claude
 
 Android TV launcher (Kotlin, plain Android Views, no AndroidX or third-party runtime libraries) with a Nepali calendar. One module: `tv/`.
 
@@ -12,10 +12,10 @@ chmod +x gradlew
 
 ## Rules that must never be broken
 
-- **Privacy:** the app must not request `android.permission.INTERNET` or add analytics, ads, accounts, crash reporting or third-party runtime libraries. Settings stay in the app's private storage, and `android:allowBackup` stays `false`.
+- **Privacy:** `android.permission.INTERNET` is used only to read photos from an SMB share on the home network. Every connection must go through `smb/LocalNetwork` (`resolve`, or `findSmbServers` for the TV's own subnet), which refuses non-local addresses; keep `SmbTest` passing; never connect to anything on the internet. No analytics, ads, accounts, crash reporting or third-party runtime libraries. Settings stay in the app's private storage (the share password encrypted with the Android keystore), and `android:allowBackup` stays `false`.
 - **No personal data** in the repo: no real IP addresses, MAC addresses, Wi-Fi names, people's names or device identifiers. Use `192.168.1.50` in examples.
 - **Never commit signing material:** `signing/`, `*.jks`, `keystore.properties`, `local.properties`.
-- **Calendar accuracy:** `tv/src/main/java/app/himalayandawn/tv/calendar/` drives dates shown to families for religious observances.
+- **Calendar accuracy:** `tv/src/main/java/app/lakuri/tv/calendar/` drives dates shown to families for religious observances.
   - Keep `CalendarTest` passing; it checks the 2083 Dashain, Tihar and Chhath dates against Hamro Patro.
   - When changing festival rules, add a test with dates from a published Nepali patro, and say in the pull request where the dates came from.
 - **Photos:** only use freely licensed images, and add each one's credit to `scenes.json` and `THIRD_PARTY_NOTICES.md`.

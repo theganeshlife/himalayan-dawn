@@ -6,7 +6,7 @@
     android:clipToOutline="true"
     android:orientation="vertical">
 
-    <app.himalayandawn.tv.LatticeView
+    <app.lakuri.tv.LatticeView
         android:layout_width="match_parent"
         android:layout_height="10dp" />
 

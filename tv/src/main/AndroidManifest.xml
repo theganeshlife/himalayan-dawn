@@ -3,6 +3,8 @@
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <!-- Only for photos from a shared folder on the home network; LocalNetwork refuses internet addresses. -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature android:name="android.software.leanback" android:required="false" />
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
@@ -51,6 +53,11 @@
         <activity android:name=".SettingsActivity" android:exported="false" android:screenOrientation="landscape" />
         <activity android:name=".CreditsActivity" android:exported="false" android:screenOrientation="landscape" />
         <activity
+            android:name=".NetworkPhotosActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
             android:name=".WelcomeActivity"
             android:excludeFromRecents="true"
             android:exported="false"
@@ -78,8 +85,8 @@
             android:exported="true"
             android:permission="android.permission.DUMP">
             <intent-filter>
-                <action android:name="app.himalayandawn.tv.KIDS_ON" />
-                <action android:name="app.himalayandawn.tv.KIDS_OFF" />
+                <action android:name="app.lakuri.tv.KIDS_ON" />
+                <action android:name="app.lakuri.tv.KIDS_OFF" />
             </intent-filter>
         </receiver>
 

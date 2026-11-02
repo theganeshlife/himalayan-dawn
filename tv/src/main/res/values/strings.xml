@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Himalayan Dawn</string>
-    <string name="dream_name">Himalayan Dawn calendar</string>
+    <string name="app_name">Lakuri Android TV</string>
+    <string name="dream_name">Lakuri Android TV calendar</string>
     <string name="upcoming_festivals">आउँदै गरेका चाडपर्व</string>
     <string name="nepal_time">नेपाल समय</string>
     <string name="all_apps">All apps</string>

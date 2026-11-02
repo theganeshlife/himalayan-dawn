@@ -1,5 +1,5 @@
-# Installs Himalayan Dawn on an Android TV over the network and makes it the home screen and screensaver.
-#   .\setup-tv.ps1 -Tv 192.168.1.50 -Apk ..\HimalayanDawnTV.apk
+# Installs Lakuri Android TV on an Android TV over the network and makes it the home screen and screensaver.
+#   .\setup-tv.ps1 -Tv 192.168.1.50 -Apk ..\LakuriAndroidTV.apk
 #   .\setup-tv.ps1 -Tv 192.168.1.50 -Undo        # puts the TV's own launcher and screensaver back
 # Needs adb (Android platform-tools) on PATH, and Network debugging switched on in the TV's Developer options.
 param(
@@ -10,7 +10,7 @@ param(
 $target = if ($Tv -match ':') { $Tv } else { "${Tv}:5555" }
 $stockLaunchers = @('com.google.android.tvlauncher', 'com.google.android.apps.tv.launcherx')
 $ambient = 'com.google.android.backdrop'
-$dream = 'app.himalayandawn.tv/.DawnDreamService'
+$dream = 'app.lakuri.tv/.DawnDreamService'
 
 function Adb { & adb -s $target @args }
 
@@ -22,7 +22,7 @@ if ($Undo) {
     foreach ($p in $stockLaunchers + $ambient) { Adb shell pm enable $p 2>$null | Out-Host }
     Adb shell settings put secure screensaver_components "$ambient/.Backdrop" | Out-Null
     Adb shell input keyevent KEYCODE_HOME
-    Write-Host 'Done. The TV is back to its own launcher. Himalayan Dawn is still installed; remove it with: adb uninstall app.himalayandawn.tv'
+    Write-Host 'Done. The TV is back to its own launcher. Lakuri Android TV is still installed; remove it with: adb uninstall app.lakuri.tv'
     return
 }
 
@@ -30,7 +30,7 @@ if ($Apk) {
     Write-Host "Installing $Apk ..."
     Adb install -r $Apk | Out-Host
 }
-if (-not (Adb shell pm path app.himalayandawn.tv)) { throw 'Himalayan Dawn is not installed. Pass -Apk path\to\HimalayanDawnTV.apk' }
+if (-not (Adb shell pm path app.lakuri.tv)) { throw 'Lakuri Android TV is not installed. Pass -Apk path\to\LakuriAndroidTV.apk' }
 
 # The stock launcher outranks any installed app, so it has to be switched off (not removed) for ours to be Home.
 foreach ($p in $stockLaunchers) {

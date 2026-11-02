@@ -1,4 +1,4 @@
-# Himalayan Dawn Android TV Launcher
+# Lakuri Android TV Launcher
 
 An ad-free home screen (launcher) for Android TV with the Nepali calendar built in. It shows:
 - the Bikram Sambat date in Devanagari
@@ -8,7 +8,7 @@ An ad-free home screen (launcher) for Android TV with the Nepali calendar built 
 
 The background is a set of photos of Nepal that change slowly.
 
-> **Use at your own risk.** Installing Himalayan Dawn means turning on developer options and switching off your TV's built-in home screen. This may affect your warranty or the support your TV maker offers. Read the [Disclaimer](#disclaimer) before you start.
+> **Use at your own risk.** Installing Lakuri Android TV means turning on developer options and switching off your TV's built-in home screen. This may affect your warranty or the support your TV maker offers. Read the [Disclaimer](#disclaimer) before you start.
 
 ![Home screen over Fewa Lake](docs/screenshots/home-fewa.jpg)
 
@@ -24,11 +24,12 @@ The background is a set of photos of Nepal that change slowly.
 - **Today's tithi**, for example आश्विन शुक्ल पूर्णिमा
 - **Upcoming festivals** with a countdown: Dashain, Tihar, Chhath, Teej, Janai Purnima, Shivaratri, Holi, Buddha Jayanti, Tamu Lhosar, national days and others
 - **Eleven photos of Nepal** that cross-fade every minute: Fewa Lake, Annapurna, Machhapuchhre, Bhaktapur, Swayambhunath, Patan, Rara Lake, Everest and more
+- **Or your own photos** from a shared folder on a computer or NAS in your home (see [Your own photos](#your-own-photos))
 - **The same calendar as a screensaver**
 - **Optional "Who's watching?" screen** and a Kids mode protected by a PIN
 - **Closes leftover background apps** when the TV starts, and shows a notice when storage is low
 - **A Browser tile** for [TV Bro](https://github.com/truefedex/tv-bro), a browser designed for TV remotes
-- **No ads, no tracking, no internet access** (see [Privacy](#privacy))
+- **No ads, no tracking, and no connections outside your home network** (see [Privacy](#privacy))
 
 ## Compatible TVs
 
@@ -51,8 +52,8 @@ Before you start, read the [Disclaimer](#disclaimer). If your TV is still under 
 ### 2. Prepare the computer
 
 1. **Download Android Platform Tools** for your system from [developer.android.com/tools/releases/platform-tools](https://developer.android.com/tools/releases/platform-tools) and unzip it.
-2. **Download from the [latest release](https://github.com/theganeshlife/himalayan-dawn/releases/latest)** into that same `platform-tools` folder:
-   - `HimalayanDawnTV.apk`
+2. **Download from the [latest release](https://github.com/tsakeor/android-tv-screen/releases/latest)** into that same `platform-tools` folder:
+   - `LakuriAndroidTV.apk`
    - `setup-tv.ps1` (Windows) or `setup-tv.sh` (Mac/Linux)
 
 ### 3. Run the setup
@@ -62,12 +63,12 @@ Open a terminal in the `platform-tools` folder, then run the command for your sy
 - **Windows:** right-click inside the folder and choose **Open in Terminal**, then:
   ```powershell
   $env:Path = "$PWD;$env:Path"
-  powershell -ExecutionPolicy Bypass -File .\setup-tv.ps1 -Tv 192.168.1.50 -Apk .\HimalayanDawnTV.apk
+  powershell -ExecutionPolicy Bypass -File .\setup-tv.ps1 -Tv 192.168.1.50 -Apk .\LakuriAndroidTV.apk
   ```
 - **Mac / Linux:**
   ```bash
   export PATH="$PWD:$PATH"
-  bash setup-tv.sh 192.168.1.50 HimalayanDawnTV.apk
+  bash setup-tv.sh 192.168.1.50 LakuriAndroidTV.apk
   ```
 
 When the TV asks **"Allow USB debugging?"**, tick **Always allow from this computer** and select **OK**. Then press **Home** on the remote.
@@ -79,6 +80,20 @@ On the home screen, open the **Launcher** tile:
 - **Set a PIN:** needed if you want Kids mode to stay locked.
 
 To choose which apps appear on the home screen, open **All apps** and press and hold OK on an app.
+
+### Your own photos
+
+The background can show photos from a shared folder on a Windows PC, Mac, Linux computer or NAS in your home, instead of the built-in photos. A new photo appears every minute (you can change this under **Change scene every**). Photos in subfolders are included, and photos you add to the folder are picked up automatically.
+
+1. On the computer, share the folder (on Windows: right-click the folder › **Properties › Sharing › Share**).
+2. On the TV, open **Launcher › Photos**.
+3. Select **Find computers on this network** and choose the computer, or type its address (for example `192.168.1.50`).
+4. Enter the user name and password of an account on that computer (leave both empty for guest access), then select **Connect and choose a folder**.
+5. Choose the shared folder, open subfolders if you like, and select **Use this folder**.
+
+Only computers on your home network can be used: the app refuses any address outside the local network (anything other than 10.x.x.x, 172.16–31.x.x, 192.168.x.x and link-local addresses). JPG, PNG and WebP photos up to 40 MB are shown. If the computer is off, the built-in photos are shown until it's back. To go back to the built-in photos, choose **Use the built-in photos of Nepal**.
+
+The app supports SMB 2 and SMB 3 with signing. Shares that require SMB encryption ("Encrypt data access" on Windows Server) aren't supported.
 
 ### Undo
 
@@ -93,9 +108,9 @@ powershell -ExecutionPolicy Bypass -File .\setup-tv.ps1 -Tv 192.168.1.50 -Undo
 The script:
 1. installs the app
 2. switches off (does not delete) the TV's stock launcher and its Ambient Mode screensaver
-3. sets Himalayan Dawn as the screensaver
+3. sets Lakuri Android TV as the screensaver
 
-Android TV gives its stock launcher priority over any installed app, so the stock launcher has to be switched off for Himalayan Dawn to become the home screen.
+Android TV gives its stock launcher priority over any installed app, so the stock launcher has to be switched off for Lakuri Android TV to become the home screen.
 
 ### Newer Google TV devices
 
@@ -127,35 +142,35 @@ Both scripts are in the `scripts/` folder of this repository.
 
 ## Privacy
 
-Himalayan Dawn does not collect or send any data.
+Lakuri Android TV does not collect or send any data to anyone.
 
-- **No internet access.** The app does not request internet permission, so it cannot connect to any server. All calendar data and photos are included in the app.
-- **Two permissions only:** starting when the TV boots, and closing idle background apps.
+- **Home network only.** The app has network permission for one reason: reading photos from a shared folder you choose on your home network. It refuses any address outside the local network, so it cannot connect to servers on the internet. All calendar data and the built-in photos are included in the app.
+- **Three permissions only:** starting when the TV boots, closing idle background apps, and network access for your shared photo folder.
 - **No analytics, advertising, accounts, crash reporting or third-party libraries.**
-- **Settings stay on the TV**, in the app's private storage: pinned apps, Kids mode apps, scene timing and home city. The PIN is stored as a one-way hash, not the PIN itself.
+- **Settings stay on the TV**, in the app's private storage: pinned apps, Kids mode apps, scene timing, your shared photo folder and home city. The PIN is stored as a one-way hash, not the PIN itself. The shared folder's password is encrypted with a key kept in the TV's secure keystore.
 - **Not backed up anywhere.** Android backup is turned off for the app. Uninstalling it removes everything it stored.
 
 ## Security
 
 While debugging is turned on, any device the TV has allowed can control the TV over the network. The TV always asks before allowing a new device; only allow devices you recognise.
 
-Himalayan Dawn does not need debugging after installation. You can turn **USB debugging** and **Network debugging** off once setup is finished, and turn them on again only when you run a script.
+Lakuri Android TV does not need debugging after installation. You can turn **USB debugging** and **Network debugging** off once setup is finished, and turn them on again only when you run a script.
 
 ## Building from source
 
 Requirements: JDK 17 and the Android SDK (platform 34, build-tools 34.0.0).
 
 ```bash
-git clone https://github.com/theganeshlife/himalayan-dawn.git
-cd himalayan-dawn
+git clone https://github.com/tsakeor/android-tv-screen.git
+cd android-tv-screen
 ./gradlew :tv:testDebugUnitTest      # calendar and festival tests
 ./gradlew :tv:assembleRelease        # APK in tv/build/outputs/apk/release/
 ```
 
-**Signing:** release builds are signed with the Android debug key unless you provide your own. To use your own key, create `signing/himalayandawn.jks` with `keytool`, then `signing/keystore.properties` containing:
+**Signing:** release builds are signed with the Android debug key unless you provide your own. To use your own key, create `signing/lakuri.jks` with `keytool`, then `signing/keystore.properties` containing:
 
 ```
-storeFile=himalayandawn.jks
+storeFile=lakuri.jks
 storePassword=…
 keyAlias=…
 keyPassword=…
@@ -166,16 +181,16 @@ The `signing/` folder is excluded from git.
 | Path | Contents |
 |---|---|
 | `tv/` | Launcher, screensaver, welcome and PIN screens |
-| `tv/src/main/java/app/himalayandawn/tv/calendar/` | Bikram Sambat conversion, sun and moon positions, tithi and festival rules |
+| `tv/src/main/java/app/lakuri/tv/calendar/` | Bikram Sambat conversion, sun and moon positions, tithi and festival rules |
 | `scripts/` | Setup, undo, clean-up and TCL scripts |
 
 **Optional adb commands:**
-- Show a particular scene: `adb shell am start -n app.himalayandawn.tv/.HomeActivity --es scene fewa`. Scene IDs are listed in `tv/src/main/assets/scenes/scenes.json`.
-- Turn Kids mode on or off: `adb shell am broadcast -n app.himalayandawn.tv/.RemoteReceiver -a app.himalayandawn.tv.KIDS_ON` (or `KIDS_OFF`).
+- Show a particular scene: `adb shell am start -n app.lakuri.tv/.HomeActivity --es scene fewa`. Scene IDs are listed in `tv/src/main/assets/scenes/scenes.json`.
+- Turn Kids mode on or off: `adb shell am broadcast -n app.lakuri.tv/.RemoteReceiver -a app.lakuri.tv.KIDS_ON` (or `KIDS_OFF`).
 
 ## Disclaimer
 
-Himalayan Dawn is a personal, non-commercial project, provided **as is, without any warranty**. You use it **entirely at your own risk**.
+Lakuri Android TV is a personal, non-commercial project, provided **as is, without any warranty**. You use it **entirely at your own risk**.
 
 - **Warranty and support:** turning on developer options, enabling debugging and switching off the TV's built-in launcher are changes the manufacturer did not intend. They may void or affect your warranty, and may affect support from your TV maker, retailer or service provider. If your TV is under warranty, check with them first.
 - **Testing:** the app was developed and tested on a single Android 11 TV that was out of warranty. Other models, brands and Android versions may behave differently.
@@ -190,13 +205,15 @@ Himalayan Dawn is a personal, non-commercial project, provided **as is, without 
 
 ## Reporting problems
 
-Please [open an issue](https://github.com/theganeshlife/himalayan-dawn/issues/new/choose) and include your TV brand and model, the Android version (**Settings › Device Preferences › About**), what you expected, what happened, and a photo of the screen if possible.
+Please [open an issue](https://github.com/tsakeor/android-tv-screen/issues/new/choose) and include your TV brand and model, the Android version (**Settings › Device Preferences › About**), what you expected, what happened, and a photo of the screen if possible.
 
 Confirmed issues are investigated and fixed with the help of [Claude](https://www.anthropic.com/claude). Every fix is reviewed before it is merged and released.
 
 ## Contributors
 
-- **[theganeshlife](https://github.com/theganeshlife)**: idea, design direction, testing on a real TV, and maintenance
+Lakuri Android TV is a fork of [Himalayan Dawn](https://github.com/theganeshlife/himalayan-dawn).
+
+- **[theganeshlife](https://github.com/theganeshlife)**: Himalayan Dawn's idea, design direction, testing on a real TV, and maintenance
 - **[Claude](https://www.anthropic.com/claude)** (Anthropic): co-developer; wrote much of the code, calendar calculations, scripts and documentation using Claude Code
 
 ## Licence and credits

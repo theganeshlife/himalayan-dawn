@@ -12,7 +12,7 @@ val signingProps = Properties().apply {
 }
 
 android {
-    namespace = "app.himalayandawn.tv"
+    namespace = "app.lakuri.tv"
     compileSdk = 34
 
     signingConfigs {
@@ -27,7 +27,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "app.himalayandawn.tv"
+        applicationId = "app.lakuri.tv"
         minSdk = 28
         targetSdk = 34
         versionCode = 1

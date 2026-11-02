@@ -5,7 +5,7 @@
     android:background="@color/night"
     android:clipChildren="false">
 
-    <app.himalayandawn.tv.SceneView
+    <app.lakuri.tv.SceneView
         android:id="@+id/scene"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -124,7 +124,7 @@
         android:clipToPadding="false"
         android:orientation="vertical">
 
-        <app.himalayandawn.tv.DhakaBandView
+        <app.lakuri.tv.DhakaBandView
             android:layout_width="match_parent"
             android:layout_height="8dp"
             android:layout_marginStart="48dp"

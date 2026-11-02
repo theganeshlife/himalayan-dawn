@@ -17,6 +17,6 @@ labels: bug
 
 **Photo or screenshot** (if possible):
 
-**For a wrong calendar date:** which date, what Himalayan Dawn showed, and what a printed patro or Hamro Patro shows.
+**For a wrong calendar date:** which date, what Lakuri Android TV showed, and what a printed patro or Hamro Patro shows.
 
 Please don't include passwords, IP addresses or other personal information.
